@@ -58,14 +58,14 @@ function ThemedLiveEditor() {
 function EditorWithHeader() {
   return (
     <>
-      <Header>
+      {/* <Header>
         <Translate
           id="theme.Playground.liveEditor"
           description="The live editor label of the live codeblocks"
         >
           Live Editor
         </Translate>
-      </Header>
+      </Header> */}
       <ThemedLiveEditor />
     </>
   );

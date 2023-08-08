@@ -17,8 +17,7 @@ const meta = {
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
-const docs = [
-  {
+const docs = [{
     id: 'cli',
     path: 'docs/cli',
     routeBasePath: '/cli',
@@ -180,7 +179,9 @@ const defaultSettings = {
   editUrl: 'https://github.com/dyte-in/docs/tree/main/',
   showLastUpdateTime: true,
   remarkPlugins: [
-    [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
+    [require('@docusaurus/remark-plugin-npm2yarn'), {
+      sync: true
+    }],
   ],
   sidebarPath: require.resolve('./sidebars-default.js'),
 };
@@ -204,7 +205,9 @@ function create_doc_plugin({
   ];
 }
 
-const { webpackPlugin } = require('./plugins/webpack-plugin.cjs');
+const {
+  webpackPlugin
+} = require('./plugins/webpack-plugin.cjs');
 const tailwindPlugin = require('./plugins/tailwind-plugin.cjs');
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 
@@ -216,120 +219,120 @@ const plugins = [
     '@docusaurus/plugin-client-redirects',
     {
       createRedirects(path) {
-        if (path.startsWith('/guides/capabilities/webhooks')) {
-          return [
-            path.replace('/guides/capabilities/webhooks', '/guides/webhooks'),
-            path.replace(
-              '/guides/capabilities/webhooks',
-              '/guides/features/webhooks'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/recording')) {
-          return [
-            path.replace('/guides/capabilities/recording', '/guides/recording'),
-            path.replace(
-              '/guides/capabilities/recording',
-              '/guides/features/recording'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/recording')) {
-          return [
-            path.replace('/guides/capabilities/recording', '/guides/recording'),
-            path.replace(
-              '/guides/capabilities/recording',
-              '/guides/features/recording'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/embed')) {
-          return [
-            path.replace('/guides/capabilities/embed', '/guides/embed'),
-            path.replace(
-              '/guides/capabilities/embed',
-              '/guides/features/embed'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/export-chat-dump')) {
-          return [
-            path.replace(
-              '/guides/capabilities/export-chat-dump',
-              '/guides/export-chat-dump'
-            ),
-            path.replace(
-              '/guides/capabilities/export-chat-dump',
-              '/guides/features/export-chat-dump'
-            ),
-          ];
-        }
-        if (path.startsWith('/guides/capabilities/breakoutroom')) {
-          return [
-            path.replace(
-              '/guides/capabilities/breakoutroom',
-              '/guides/breakoutroom'
-            ),
-            path.replace(
-              '/guides/capabilities/breakoutroom',
-              '/guides/features/breakoutroom'
-            ),
-          ];
-        }
-        /* for everything else */
-        if (path.startsWith('/guides/capabilities')) {
-          return [path.replace('/guides/capabilities', '/guides/features')];
-        }
-        if (path === '/ui-kit') {
-          return [
-            '/javascript/advanced-usage',
-            '/javascript/customize-meeting-ui',
-            '/javascript/events',
-            '/javascript/installation',
-            '/javascript/quickstart',
-            '/javascript/reference/chat-message',
-            '/javascript/reference/connection-config',
-            '/javascript/reference/dyte-client',
-            '/javascript/reference/dyte-control-bar',
-            '/javascript/reference/dyte-errors',
-            '/javascript/reference/dyte-grid',
-            '/javascript/reference/dyte-meeting-events',
-            '/javascript/reference/dyte-plugin',
-            '/javascript/reference/dyte-ui-config',
-            '/javascript/reference/meeting',
-            '/javascript/reference/participant',
-            '/javascript/reference/self-participant',
-            '/javascript/sample-app',
-            '/javascript/usage',
-            '/javascript/virtual-background',
-            '/javascript/',
-          ];
-        }
-        if (path === '/react-ui-kit') {
-          return [
-            '/react/advanced-usage',
-            '/react/customize-meeting-ui',
-            '/react/events',
-            '/react/installation',
-            '/react/quickstart',
-            '/react/reference/chat-message',
-            '/react/reference/connection-config',
-            '/react/reference/dyte-client',
-            '/react/reference/dyte-control-bar',
-            '/react/reference/dyte-errors',
-            '/react/reference/dyte-grid',
-            '/react/reference/dyte-meeting-events',
-            '/react/reference/dyte-plugin',
-            '/react/reference/dyte-ui-config',
-            '/react/reference/meeting',
-            '/react/reference/participant',
-            '/react/reference/self-participant',
-            '/react/sample-app',
-            '/react/usage',
-            '/react/virtual-background',
-            '/react/',
-          ];
-        }
+        // if (path.startsWith('/guides/capabilities/webhooks')) {
+        //   return [
+        //     path.replace('/guides/capabilities/webhooks', '/guides/webhooks'),
+        //     path.replace(
+        //       '/guides/capabilities/webhooks',
+        //       '/guides/features/webhooks'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/recording')) {
+        //   return [
+        //     path.replace('/guides/capabilities/recording', '/guides/recording'),
+        //     path.replace(
+        //       '/guides/capabilities/recording',
+        //       '/guides/features/recording'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/recording')) {
+        //   return [
+        //     path.replace('/guides/capabilities/recording', '/guides/recording'),
+        //     path.replace(
+        //       '/guides/capabilities/recording',
+        //       '/guides/features/recording'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/embed')) {
+        //   return [
+        //     path.replace('/guides/capabilities/embed', '/guides/embed'),
+        //     path.replace(
+        //       '/guides/capabilities/embed',
+        //       '/guides/features/embed'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/export-chat-dump')) {
+        //   return [
+        //     path.replace(
+        //       '/guides/capabilities/export-chat-dump',
+        //       '/guides/export-chat-dump'
+        //     ),
+        //     path.replace(
+        //       '/guides/capabilities/export-chat-dump',
+        //       '/guides/features/export-chat-dump'
+        //     ),
+        //   ];
+        // }
+        // if (path.startsWith('/guides/capabilities/breakoutroom')) {
+        //   return [
+        //     path.replace(
+        //       '/guides/capabilities/breakoutroom',
+        //       '/guides/breakoutroom'
+        //     ),
+        //     path.replace(
+        //       '/guides/capabilities/breakoutroom',
+        //       '/guides/features/breakoutroom'
+        //     ),
+        //   ];
+        // }
+        // /* for everything else */
+        // if (path.startsWith('/guides/capabilities')) {
+        //   return [path.replace('/guides/capabilities', '/guides/features')];
+        // }
+        // if (path === '/ui-kit') {
+        //   return [
+        //     '/javascript/advanced-usage',
+        //     '/javascript/customize-meeting-ui',
+        //     '/javascript/events',
+        //     '/javascript/installation',
+        //     '/javascript/quickstart',
+        //     '/javascript/reference/chat-message',
+        //     '/javascript/reference/connection-config',
+        //     '/javascript/reference/dyte-client',
+        //     '/javascript/reference/dyte-control-bar',
+        //     '/javascript/reference/dyte-errors',
+        //     '/javascript/reference/dyte-grid',
+        //     '/javascript/reference/dyte-meeting-events',
+        //     '/javascript/reference/dyte-plugin',
+        //     '/javascript/reference/dyte-ui-config',
+        //     '/javascript/reference/meeting',
+        //     '/javascript/reference/participant',
+        //     '/javascript/reference/self-participant',
+        //     '/javascript/sample-app',
+        //     '/javascript/usage',
+        //     '/javascript/virtual-background',
+        //     '/javascript/',
+        //   ];
+        // }
+        // if (path === '/react-ui-kit') {
+        //   return [
+        //     '/react/advanced-usage',
+        //     '/react/customize-meeting-ui',
+        //     '/react/events',
+        //     '/react/installation',
+        //     '/react/quickstart',
+        //     '/react/reference/chat-message',
+        //     '/react/reference/connection-config',
+        //     '/react/reference/dyte-client',
+        //     '/react/reference/dyte-control-bar',
+        //     '/react/reference/dyte-errors',
+        //     '/react/reference/dyte-grid',
+        //     '/react/reference/dyte-meeting-events',
+        //     '/react/reference/dyte-plugin',
+        //     '/react/reference/dyte-ui-config',
+        //     '/react/reference/meeting',
+        //     '/react/reference/participant',
+        //     '/react/reference/self-participant',
+        //     '/react/sample-app',
+        //     '/react/usage',
+        //     '/react/virtual-background',
+        //     '/react/',
+        //   ];
+        // }
         return undefined; // Return a falsy value: no redirect created
       },
     },
@@ -398,8 +401,7 @@ const config = {
           height: '40px',
           width: '101px',
         },
-        items: [
-          {
+        items: [{
             label: 'Guides',
             to: 'guides',
             className: 'guides-top-header',
@@ -408,34 +410,30 @@ const config = {
             label: 'SDKs',
             type: 'dropdown',
             className: 'dyte-dropdown',
-            items: [
-              {
-                type: 'html',
-                value: sdksHTML,
-                className: 'dyte-dropdown',
-              },
-            ],
+            items: [{
+              type: 'html',
+              value: sdksHTML,
+              className: 'dyte-dropdown',
+            }, ],
           },
           {
             label: 'REST API',
             to: '/api/',
           },
-          {
-            label: 'Resources',
-            type: 'dropdown',
-            className: 'dyte-dropdown resources-dropdown',
-            items: [
-              {
-                type: 'html',
-                value: resourcesHTML,
-                className: 'dyte-dropdown',
-              },
-            ],
-          },
-          {
-            label: 'Support',
-            to: 'https://dyte.io/contact',
-          },
+          // {
+          //   label: 'Resources',
+          //   type: 'dropdown',
+          //   className: 'dyte-dropdown resources-dropdown',
+          //   items: [{
+          //     type: 'html',
+          //     value: resourcesHTML,
+          //     className: 'dyte-dropdown',
+          //   }, ],
+          // },
+          // {
+          //   label: 'Support',
+          //   to: 'https://dyte.io/contact',
+          // },
 
           {
             type: 'search',
@@ -463,11 +461,9 @@ const config = {
           alt: 'Dyte Docs',
           height: '36px',
         },
-        links: [
-          {
+        links: [{
             title: 'Product',
-            items: [
-              {
+            items: [{
                 label: 'Demo',
                 href: 'https://app.dyte.io',
               },
@@ -483,8 +479,7 @@ const config = {
           },
           {
             title: 'Company',
-            items: [
-              {
+            items: [{
                 label: 'About Us',
                 href: 'https://dyte.io',
               },
@@ -502,23 +497,22 @@ const config = {
               },
             ],
           },
-          {
-            title: 'Resources',
-            items: [
-              {
-                label: 'Documentation',
-                href: '/',
-              },
-              {
-                label: 'Blog',
-                href: 'https://dyte.io/blog',
-              },
-              {
-                label: 'Community',
-                href: 'https://community.dyte.io',
-              },
-            ],
-          },
+          // {
+          //   title: 'Resources',
+          //   items: [{
+          //       label: 'Documentation',
+          //       href: '/',
+          //     },
+          //     {
+          //       label: 'Blog',
+          //       href: 'https://dyte.io/blog',
+          //     },
+          //     {
+          //       label: 'Community',
+          //       href: 'https://community.dyte.io',
+          //     },
+          //   ],
+          // },
         ],
         copyright: 'Copyright © Dyte since 2023. All rights reserved.',
       },
@@ -534,11 +528,13 @@ const config = {
           'swift',
           'objectivec',
         ],
-        magicComments: [
-          {
+        magicComments: [{
             className: 'theme-code-block-highlighted-line',
             line: 'highlight-next-line',
-            block: { start: 'highlight-start', end: 'highlight-end' },
+            block: {
+              start: 'highlight-start',
+              end: 'highlight-end'
+            },
           },
           {
             className: 'code-block-error-line',

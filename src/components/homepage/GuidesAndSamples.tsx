@@ -15,7 +15,7 @@ interface Guide {
   title: string;
   icon: any;
   text: string;
-  link: string;
+
 }
 
 const guides: Guide[] = [
@@ -23,19 +23,19 @@ const guides: Guide[] = [
     title: 'Start Recording a Meeting',
     icon: RecordRegular,
     text: 'Check out an example of this integration of recording a meeting.',
-    link: '/guides/capabilities/recording',
+    
   },
   {
     title: 'Migrate from Twilio',
     icon: VideoRegular,
     text: 'Migration simplified. Refer the guide.',
-    link: '/guides/migration/twilio/concepts-twilio-vs-dyte',
+   
   },
   {
     title: 'Create a Breakout Room',
     icon: AppsAddInRegular,
     text: 'Easily split a meeting in separate sessions.',
-    link: '/guides/capabilities/breakoutroom/create-breakout-rooms',
+
   },
 ];
 

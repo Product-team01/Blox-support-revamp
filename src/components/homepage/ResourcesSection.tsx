@@ -8,7 +8,6 @@ import {
 } from '@fluentui/react-icons';
 
 interface Resource {
-  url: string;
   type: string;
   title: string;
   description: string;
@@ -18,7 +17,6 @@ interface Resource {
 
 const ALL_RESOURCES: Resource[] = [
   {
-    url: '/guides/v2-migration-guide',
     type: 'blog',
     title: 'Migrate to v2 REST API',
     description:
@@ -28,7 +26,6 @@ const ALL_RESOURCES: Resource[] = [
     duration: '3 min',
   },
   {
-    url: 'https://dyte.io/blog/hls-in-depth/',
     type: 'blog',
     title: 'HLS in Depth',
     description:
@@ -38,7 +35,6 @@ const ALL_RESOURCES: Resource[] = [
     duration: '10 min',
   },
   {
-    url: 'https://www.youtube.com/watch?v=eVUqkNNHh1o',
     type: 'video',
     title: 'Integrating React UI Kit',
     description:
@@ -47,7 +43,6 @@ const ALL_RESOURCES: Resource[] = [
     duration: '5 min',
   },
   {
-    url: 'https://www.youtube.com/watch?v=ZkrZc8Neh6A',
     type: 'video',
     title: 'Video KYC App using React UI Kit',
     description:
@@ -56,7 +51,6 @@ const ALL_RESOURCES: Resource[] = [
     duration: '5 min',
   },
   {
-    url: 'https://www.youtube.com/watch?v=UHuzWDxrvLk',
     type: 'video',
     title: 'Calling Dyte REST APIs',
     description: 'Understand our HTTP REST APIs',
@@ -67,7 +61,7 @@ const ALL_RESOURCES: Resource[] = [
 
 function Resource({
   type,
-  url,
+
   image,
   title,
   description,
@@ -75,11 +69,11 @@ function Resource({
 }: Resource) {
   return (
     <Link
-      className="fade-in group flex flex-col justify-between"
-      key={title}
-      href={url}
+    // className="fade-in group flex flex-col justify-between"
+    // key={title}
+    // href={}
     >
-      <div>
+      {/* <div>
         <div className="mb-3 overflow-hidden rounded-lg">
           <img
             src={image}
@@ -97,7 +91,7 @@ function Resource({
         <div className="text-sm text-text-400">
           {`${duration} ${type === 'Video' ? 'watch' : 'read'}`}
         </div>
-      </div>
+      </div> */}
     </Link>
   );
 }

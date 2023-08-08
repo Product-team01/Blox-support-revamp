@@ -8,7 +8,7 @@ import clsx from 'clsx';
 
 import useBreakpoint from '../lib/useBreakpoint';
 import SectionsMenu from '../components/SectionsMenu';
-import RunInPostmanButton from '../components/RunInPostmanButton';
+// import RunInPostmanButton from '../components/RunInPostmanButton';
 import { Monitor } from 'react-feather';
 import Link from '@docusaurus/Link';
 import { APIIcon } from '../icons';
@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <Layout
       title="API Reference"
-      description="Dyte REST API Reference"
+      description="Blox API Reference"
       noFooter
       wrapperClassName="api-reference"
     >
@@ -73,7 +73,7 @@ export default function Home() {
         <Monitor className="h-12 w-12" />
         This page is best viewed in a desktop browser.
       </div>
-
+      {/* 
       <div className="header">
         <h1 className="mb-0 flex items-center gap-2 text-sm font-semibold lg:text-lg">
           <APIIcon className="hidden h-8 lg:block" />
@@ -101,7 +101,7 @@ export default function Home() {
             className="compact"
           />
         </div>
-      </div>
+      </div> */}
       <APIElement
         layout={size === 'sm' ? 'stacked' : 'sidebar'}
         currentVersion={currentVersion}

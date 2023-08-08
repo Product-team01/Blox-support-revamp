@@ -12,7 +12,7 @@ import clsx from 'clsx';
 const PRODUCTS = [
   {
     title: 'Live Video',
-    link: '/guides/live-video/intro-video-conf',
+
     icon: VideoRegular,
     lightImage: '/static/landing-page/hero/video-graphic.png',
     darkImage: '/static/landing-page/hero/video-graphic-dark.png',
@@ -20,7 +20,7 @@ const PRODUCTS = [
   },
   {
     title: 'Voice',
-    link: '/guides/voice-conf/intro-voice-conf',
+
     icon: MicRegular,
     lightImage: '/static/landing-page/hero/voice-graphic.png',
     darkImage: '/static/landing-page/hero/voice-graphic-dark.png',
@@ -28,7 +28,7 @@ const PRODUCTS = [
   },
   {
     title: 'Interactive Live Streaming',
-    link: '/guides/livestream/livestream-overview',
+
     icon: LiveRegular,
     lightImage: '/static/landing-page/hero/livestream-graphic.png',
     darkImage: '/static/landing-page/hero/livestream-graphic-dark.png',
@@ -37,7 +37,7 @@ const PRODUCTS = [
   {
     title: 'Chat',
     beta: true,
-    link: '/guides/realtime-chat/intro-chat',
+
     icon: ChatMultipleRegular,
     lightImage: '/static/landing-page/hero/chat-graphic.png',
     darkImage: '/static/landing-page/hero/chat-graphic-dark.png',
