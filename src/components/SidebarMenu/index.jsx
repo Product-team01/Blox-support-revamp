@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import VersionDropdown from '@theme/NavbarItem/DocsVersionDropdownNavbarItem';
 import useGlobalData from '@docusaurus/useGlobalData';
 
-import SectionsMenu from '../SectionsMenu';
 import { useSectionMenu } from '../../lib/useSectionMenu';
 import styles from './styles.module.css';
 

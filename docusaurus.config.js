@@ -5,11 +5,11 @@ const code_themes = {
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'Dyte Docs',
-  tagline: 'Real-time audio & video SDKs, ready to launch 🚀',
-  url: 'https://docs.dyte.io',
+  title: 'Blox',
+  tagline: 'Blox support',
+  url: 'https://getblox.ai/',
   baseUrl: '/',
-  favicon: '/favicon.ico',
+  favicon: '/favi.svg',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -37,7 +37,7 @@ const docs = [{
   {
     id: 'ui-kit',
     path: 'docs/ui-kit',
-    routeBasePath: '/ui-kit',
+    routeBasePath: '/ui-kit/',
     versions: {
       current: {
         label: '1.x.x',
@@ -46,7 +46,7 @@ const docs = [{
   },
   {
     id: 'react-ui-kit',
-    path: 'docs/react-ui-kit',
+    path: 'docs/react-ui-kit/',
     routeBasePath: '/react-ui-kit',
     versions: {
       current: {
@@ -54,6 +54,16 @@ const docs = [{
       },
     },
   },
+  // {
+  //   id: 'react-ui-kit',
+  //   path: 'docs/react-ui-kit',
+  //   routeBasePath: '/react-ui-kit',
+  //   versions: {
+  //     current: {
+  //       label: '1.x.x',
+  //     },
+  //   },
+  // },
   {
     id: 'angular-ui-kit',
     path: 'docs/angular-ui-kit',
@@ -77,16 +87,16 @@ const docs = [{
     },
   },
   // React Web Core
-  {
-    id: 'react-web-core',
-    path: 'docs/react-web-core',
-    routeBasePath: '/react-web-core',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
+  // {
+  //   id: 'react-web-core',
+  //   path: 'docs/react-web-core',
+  //   routeBasePath: '/react-web-core',
+  //   versions: {
+  //     current: {
+  //       label: '1.x.x',
+  //     },
+  //   },
+  // },
 
   // Mobile Core
   {
@@ -161,16 +171,16 @@ const docs = [{
       },
     },
   },
-  {
-    id: 'react-native',
-    path: 'docs/rn-ui-kit',
-    routeBasePath: '/react-native',
-    versions: {
-      current: {
-        label: '1.4.x',
-      },
-    },
-  },
+  // {
+  //   id: 'react-native',
+  //   path: 'docs/rn-ui-kit',
+  //   routeBasePath: '/react-native/e',
+  //   // versions: {
+  //   //   current: {
+  //   //     label: '1.4.x',
+  //   //   },
+  //   // },
+  // },
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
@@ -383,7 +393,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: '/img/dyte-docs-card.png',
+      image: '/img/bloxlight.png',
       colorMode: {
         defaultMode: 'light',
       },
@@ -395,9 +405,9 @@ const config = {
       navbar: {
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'Dyte Docs',
+          src: '/logo/1-1.png',
+          srcDark: '/logo/1-1.png',
+          alt: 'Blox',
           height: '40px',
           width: '101px',
         },
@@ -407,7 +417,7 @@ const config = {
             className: 'guides-top-header',
           },
           {
-            label: 'SDKs',
+            label: 'Integration Docs',
             type: 'dropdown',
             className: 'dyte-dropdown',
             items: [{
@@ -416,10 +426,10 @@ const config = {
               className: 'dyte-dropdown',
             }, ],
           },
-          {
-            label: 'REST API',
-            to: '/api/',
-          },
+          // {
+          //   label: 'REST API',
+          //   to: '/api/',
+          // },
           // {
           //   label: 'Resources',
           //   type: 'dropdown',
@@ -439,64 +449,66 @@ const config = {
             type: 'search',
             position: 'right',
           },
-          {
-            label: 'Book a demo',
-            href: 'https://dyte.io/schedule-demo',
-            position: 'right',
-            className: 'navbar-book-demo',
-          },
-          {
-            label: 'Sign Up',
-            href: 'https://dev.dyte.io/register',
-            position: 'right',
-            className: 'dev-portal-signup dev-portal-link',
-          },
+          // {
+          //   label: 'Book a demo',
+          //   href: 'https://dyte.io/schedule-demo',
+          //   position: 'right',
+          //   className: 'navbar-book-demo',
+          // },
+          // {
+          //   label: 'Sign Up',
+          //   href: 'https://dev.dyte.io/register',
+          //   position: 'right',
+          //   className: 'dev-portal-signup dev-portal-link',
+          // },
         ],
       },
       footer: {
-        logo: {
-          href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'Dyte Docs',
-          height: '36px',
-        },
-        links: [{
-            title: 'Product',
-            items: [{
-                label: 'Demo',
-                href: 'https://app.dyte.io',
-              },
-              {
-                label: 'Developer Portal',
-                href: 'https://dev.dyte.io',
-              },
-              {
-                label: 'Pricing',
-                href: 'https://dyte.io/#pricing',
-              },
-            ],
-          },
-          {
-            title: 'Company',
-            items: [{
-                label: 'About Us',
-                href: 'https://dyte.io',
-              },
-              {
-                label: 'Join Us',
-                href: 'https://dyte.freshteam.com/jobs',
-              },
-              {
-                label: 'Privacy Policy',
-                href: 'https://dyte.io/privacy-policy',
-              },
-              {
-                label: 'Contact Us',
-                href: 'https://dyte.io/contact',
-              },
-            ],
-          },
+        // logo: {
+        //   // href: '/',
+        //   // src: '/logo/bloxlight.png',
+        //   // srcDark: '/logo/bloxlight.png',
+        //   // alt: 'Dyte Docs',
+        //   // height: '36px',
+        // },
+        links: [
+          // {
+          //   title: 'Product',
+          //   items: [
+          //     // {
+          //     //   label: 'Demo',
+          //     //   href: 'https://app.dyte.io',
+          //     // },
+          //     {
+          //       label: 'Developer Portal',
+          //       href: 'https://dev.dyte.io',
+          //     },
+          //     {
+          //       label: 'Pricing',
+          //       href: 'https://dyte.io/#pricing',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: 'Company',
+          //   items: [{
+          //       label: 'About Us',
+          //       href: 'https://dyte.io',
+          //     },
+          //     {
+          //       label: 'Join Us',
+          //       href: 'https://dyte.freshteam.com/jobs',
+          //     },
+          //     {
+          //       label: 'Privacy Policy',
+          //       href: 'https://dyte.io/privacy-policy',
+          //     },
+          //     {
+          //       label: 'Contact Us',
+          //       href: 'https://dyte.io/contact',
+          //     },
+          //   ],
+          // },
           // {
           //   title: 'Resources',
           //   items: [{
@@ -514,7 +526,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: 'Copyright © Dyte since 2023. All rights reserved.',
+        copyright: 'A product of MAD Street Den',
       },
       prism: {
         theme: code_themes.light,
