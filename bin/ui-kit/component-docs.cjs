@@ -1,12 +1,8 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const {
-  writeMDXFile
-} = require('./utils.cjs');
-const {
-  pascalCase
-} = require('pascal-case');
+const { writeMDXFile } = require('./utils.cjs');
+const { pascalCase } = require('pascal-case');
 
 const {
   components,
@@ -27,12 +23,7 @@ const basePaths = {
  * @returns
  */
 function generateFile(component, framework = 'core') {
-  const {
-    tag,
-    docs,
-    props,
-    usage
-  } = component;
+  const { tag, docs, props, usage } = component;
 
   function getFrontmatter() {
     const path = `/static/ui-kit/1.x.x/components/${tag}.svg`;
@@ -69,16 +60,16 @@ function generateFile(component, framework = 'core') {
   }
 
   const text = [
-      ...getFrontmatter(),
-      '',
-      `# ${getTitle()}`,
-      '',
-      docs,
-      '\n',
-      ...getExample(),
-      ...(props.length > 0 ? [`## Props`, `<PropsTable of="${tag}" />`] : []),
-      '',
-    ]
+    ...getFrontmatter(),
+    '',
+    `# ${getTitle()}`,
+    '',
+    docs,
+    '\n',
+    ...getExample(),
+    ...(props.length > 0 ? [`## Props`, `<PropsTable of="${tag}" />`] : []),
+    '',
+  ]
     .filter((line) => line)
     .join('\n');
 
@@ -86,9 +77,7 @@ function generateFile(component, framework = 'core') {
 }
 
 for (const component of components) {
-  const {
-    tag
-  } = component;
+  const { tag } = component;
 
   if (tag.startsWith('dyte-breakout') || tag.startsWith('dyte-ai')) {
     continue;
@@ -103,7 +92,7 @@ for (const component of components) {
   }
 
   /** If there is no usage documentation for any framework, skip component */
-  if (component ? .usage && Object.keys(component.usage) === 0) {
+  if (component?.usage && Object.keys(component.usage) === 0) {
     continue;
   }
 
