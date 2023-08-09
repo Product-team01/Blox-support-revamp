@@ -17,21 +17,22 @@ const meta = {
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
-const docs = [{
-    id: 'cli',
-    path: 'docs/cli',
-    routeBasePath: '/cli',
-  },
-  {
-    id: 'plugin-sdk',
-    path: 'docs/plugin-sdk',
-    routeBasePath: '/plugin-sdk',
-    versions: {
-      current: {
-        label: '1.x.x',
-      },
-    },
-  },
+const docs = [
+  // {
+  //   id: 'cli',
+  //   path: 'docs/cli',
+  //   routeBasePath: '/cli',
+  // },
+  // {
+  //   id: 'plugin-sdk',
+  //   path: 'docs/plugin-sdk',
+  //   routeBasePath: '/plugin-sdk',
+  //   versions: {
+  //     current: {
+  //       label: '1.x.x',
+  //     },
+  //   },
+  // },
 
   // Web UI Kits
   // {
